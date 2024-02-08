@@ -1,11 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Global from '../layouts/Global.astro';
 import StartAnimation from '../components/StartAnimation.astro';
 import MyNavigation from '../components/MyNavigation.astro';
+import Profile from '../components/Profile.astro';
 ---
 
-<Layout title="Christopher Glitch">
-	<main class="w-full h-screen">
+<Global title="Christopher Glitch">
+	<main class="w-full">
 		<StartAnimation />
 		<div class="root"> 
 			<MyNavigation />
@@ -20,10 +21,10 @@ import MyNavigation from '../components/MyNavigation.astro';
 					</div>
 				</div>
 			</div>
-
+			<Profile />
 		</div>
 	</main>
-</Layout>
+</Global>
 
 <style>
 

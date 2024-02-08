@@ -1,0 +1,22 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import profileImage from '../../public/profileImage.jpg';
+---
+<ContentLayout contentTitle="Profile">
+	<div class="flex justify-center items-center flex-col md:flex-row h-auto">
+		<div class="avatar md:mr-10">
+			<div class="w-48 rounded-xl">
+				<img src={profileImage.src} alt="" width="150" height="180"/>
+			</div>
+		</div>
+		<div class="flex-col">
+			<h2 class="card-title my-5 font-Menlo text-lg md:text-base lg:text-lg">Christopher Glitch</h2>
+			<article class="text-wrap text-sm">
+				千葉県出身。大学院の修士課程でVRを使った研究をしています。特にフロントエンドに興味がありますが、様々な技術に手を出しています。
+			</article>
+			<div class="flex flex-row justify-center mt-3">
+				<a class="btn btn-ghost" href="https://github.com/christopher-glitch">Github</a>
+			</div>
+		</div>
+	</div>
+</ContentLayout>
