@@ -5,7 +5,7 @@ import Loading from '../components/Loading.astro';
 
 <Layout title="Christopher Glitch">
 	<main>
-	<Loading />
+		<Loading />
 		<div class="root"> 
 			<h1>Hello World</h1>
 		</div>
@@ -21,6 +21,10 @@ import Loading from '../components/Loading.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+
+	.root{
+		visibility: hidden;
 	}
 
 
@@ -71,10 +75,6 @@ import Loading from '../components/Loading.astro';
 		gap: 2rem;
 		padding: 0;
 	}
-
-	.root {
-		visibility: hidden;
-	}
 </style>
 
 
@@ -84,12 +84,16 @@ const startAnimation = () => {
 	const loading = document.querySelector('.loading')!;
 	const typing = document.querySelector('.typing')!;
 	const root = document.querySelector('.root')!;
-	const rootElement = root as HTMLElement;
+	
 	document.body.style.overflow = "hidden";
 
 	const typingElement = typing as HTMLElement;
 	typingElement.style.display = "block";
 	const loadingElement = loading as HTMLElement;
+	const rootElement = root as HTMLElement;
+	
+
+	loadingElement.style.visibility = "visible";
 
 	typingElement.addEventListener('animationend', () => {
 		typingElement.style.borderRight = "0";
@@ -97,7 +101,7 @@ const startAnimation = () => {
 			loadingElement.style.animation = "fadeOut 1.3s"
 			loadingElement.addEventListener('animationend', () => {
 				loadingElement.style.visibility = "hidden";
-				rootElement.style.animation = "fadeIn ease-in 2s";
+				rootElement.style.animation = "fadeIn ease-in 1s";
 				rootElement.style.visibility = "visible";
 				sessionStorage.setItem("started", "true");
 			});
@@ -108,6 +112,10 @@ const startAnimation = () => {
 window.onload = () => {
 	if (!sessionStorage.getItem("started")) {
 			startAnimation();
+	}else{
+		const root = document.querySelector('.root')!;
+		const rootElement = root as HTMLElement;
+		rootElement.style.visibility = "visible";
 	}
 }
 </script>
