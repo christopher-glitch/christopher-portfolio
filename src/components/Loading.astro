@@ -32,11 +32,8 @@
 		}
 	}
 
-	@keyframes fadeInOut {
+	@keyframes fadeOut {
 		0% {
-			opacity: 0;
-		}
-		50% {
 			opacity: 1;
 		}
 		100% {
@@ -284,23 +281,3 @@
     animation: glitch-before 3s infinite linear alternate-reverse;
   }
 </style>
-<script>
-
-const startAnimation = () => {
-	const typing = document.querySelector('.typing')!;
-
-	document.body.style.overflow = "hidden";
-
-	const typingElement = typing as HTMLElement;
-	typingElement.style.display = "block";
-
-	typingElement.addEventListener('animationend', () => {
-		typingElement.style.borderRight = "0";
-		setTimeout(() => {
-			
-		}, 1000);
-	});
-}
-
-startAnimation();
-</script>
