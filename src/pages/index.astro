@@ -110,6 +110,9 @@ window.onload = () => {
 	if (!sessionStorage.getItem("started")) {
 			startAnimation();
 	}else{
+		const anime = document.querySelector('.start-animation')!;
+		const animeElement = anime as HTMLElement;
+		animeElement.style.height = "0";
 		const root = document.querySelector('.root')!;
 		const rootElement = root as HTMLElement;
 		rootElement.style.visibility = "visible";
