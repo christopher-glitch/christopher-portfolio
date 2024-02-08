@@ -1,0 +1,306 @@
+---
+
+---
+
+<div class="loading">
+	<div class="planet"></div>
+	<div class="typing glitch text-sm sm:text-base md:text-2xl"> Christopher Glitch </div>
+</div>
+
+<style>
+
+	.planet {
+		position: absolute;
+		top: 50%;
+    left: 50%;
+		transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-in, pulse-planet 5s infinite alternate;
+		filter: blur(1px);
+  }
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeInOut {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes pulse-planet {
+		0% {
+			box-shadow: 0 0 30px 20px rgba(115, 255, 185, 0.818);
+		}
+		30% {
+			box-shadow: 0 0 40px 10px rgba(79, 196, 255, 0.818);
+		}
+		50% {
+			box-shadow: 0 0 30px 20px rgba(120, 118, 255, 0.818);
+		}
+		80% {
+			box-shadow: 0 0 40px 10px rgba(223, 118, 255, 0.818);
+		}
+		100% {
+			box-shadow: 0 0 30px 20px rgba(255, 119, 164, 0.479);
+		}
+	}
+
+	@media screen and (min-width: 768px)  {
+		.typing {
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			width: 440px;
+			transform: translate(-50%, -50%);
+			font-family: "Press Start 2P";
+			color: #ffffff;
+			animation: typing 1s steps(16), blinking .4s step-end infinite alternate, glitch-p 11s infinite alternate;
+			white-space: nowrap; 
+			overflow: hidden;
+			border-right: 10px solid;
+
+		}
+	}
+
+	@media screen and (max-width: 768px) and (min-width: 640px)  {
+		.typing {
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			width: 298px;
+			transform: translate(-50%, -50%);
+			font-family: "Press Start 2P";
+			color: #ffffff;
+			animation: typing 1s steps(16), blinking .4s step-end infinite alternate;
+			white-space: nowrap; 
+			overflow: hidden;
+			border-right: 10px solid;
+		}
+	}
+
+	@media screen and (max-width: 640px)  {
+		.typing {
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			width: 260px;
+			transform: translate(-50%, -50%);
+			font-family: "Press Start 2P";
+			color: #ffffff;
+			animation: typing 1s steps(16), blinking .4s step-end infinite alternate;
+			white-space: nowrap; 
+			overflow: hidden;
+			border-right: 10px solid;
+		}
+	}
+
+	
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+	}
+
+	@keyframes blinking {
+		50% {
+			border-color: transparent
+		}
+	}
+
+	@keyframes glitch-after {
+    0% {
+      clip: rect(21px, 9999px, 6px, 0);
+    }
+    5% {
+      clip: rect(1px, 9999px, 54px, 0);
+    }
+    10% {
+      clip: rect(67px, 9999px, 12px, 0);
+    }
+    15% {
+      clip: rect(32px, 9999px, 55px, 0);
+    }
+    20% {
+      clip: rect(45px, 9999px, 49px, 0);
+    }
+    25% {
+      clip: rect(31px, 9999px, 12px, 0);
+    }
+    30% {
+      clip: rect(78px, 9999px, 98px, 0);
+    }
+    35% {
+      clip: rect(64px, 9999px, 131px, 0);
+    }
+    40% {
+      clip: rect(7px, 9999px, 7px, 0);
+    }
+    45% {
+      clip: rect(99px, 9999px, 54px, 0);
+    }
+    50% {
+      clip: rect(23px, 9999px, 52px, 0);
+    }
+    55% {
+      clip: rect(12px, 9999px, 186px, 0);
+    }
+    60% {
+      clip: rect(67px, 9999px, 26px, 0);
+    }
+    65% {
+      clip: rect(75px, 9999px, 92px, 0);
+    }
+    70% {
+      clip: rect(82px, 9999px, 42px, 0);
+    }
+    75% {
+      clip: rect(33px, 9999px, 33px, 0);
+    }
+    80% {
+      clip: rect(5px, 9999px, 121px, 0);
+    }
+    85% {
+      clip: rect(67px, 9999px, 39px, 0);
+    }
+    90% {
+      clip: rect(39px, 9999px, 196px, 0);
+    }
+    95% {
+      clip: rect(81px, 9999px, 72px, 0);
+    }
+    100% {
+      clip: rect(14px, 9999px, 182px, 0);
+    }
+  }
+
+	.glitch::after {
+    text-align: center;
+    content: "Christopher Glitch";
+    position: absolute;
+    left: 10px;
+    text-shadow: 5px 0 rgb(0, 255, 187);
+    top: 0;
+    color:rgb(255, 0, 111);
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-after 2s infinite alternate-reverse;
+  }
+  
+  @keyframes glitch-before{
+    0% {
+      clip: rect(30px, 9999px, 13px, 0);
+    }
+		5% {
+      clip: rect(131px, 9999px, 89px, 0);
+    }
+		10% {
+      clip: rect(59px, 9999px, 121px, 0);
+    }
+		15% {
+      clip: rect(32px, 9999px, 63px, 0);
+    }
+		20% {
+      clip: rect(6px, 9999px, 999px, 0);
+    }
+		25% {
+      clip: rect(20px, 9999px, 999px, 0);
+    }
+		30% {
+      clip: rect(71px, 9999px, 110px, 0);
+    }
+		35% {
+      clip: rect(4px, 9999px, 63px, 0);
+    }
+		40% {
+      clip: rect(20px, 9999px, 5px, 0);
+    }
+		45% {
+      clip: rect(79px, 9999px, 999px, 0);
+    }
+		50% {
+      clip: rect(17px, 9999px, 110px, 0);
+    }
+		55% {
+      clip: rect(90px, 9999px, 999px, 0);
+    }
+		60% {
+      clip: rect(52px, 9999px, 20px, 0);
+    }
+		65% {
+      clip: rect(3px, 9999px, 3px, 0);
+    }
+		70% {
+      clip: rect(17px, 9999px, 821px, 0);
+    }
+		75% {
+      clip: rect(78px, 9999px, 61px, 0);
+    }
+		80% {
+      clip: rect(20px, 9999px, 78px, 0);
+    }
+		85% {
+      clip: rect(61px, 9999px, 999px, 0);
+    }
+		90% {
+      clip: rect(70px, 9999px, 60px, 0);
+    }
+		95% {
+      clip: rect(4px, 9999px, 5px, 0);
+    }
+    100% {
+      clip: rect(20px, 9999px, 999px, 0);
+    }
+  }
+
+  .glitch::before {
+    text-align: center;
+    content: "Christopher Glitch";
+    position: absolute;
+    left: -2px;
+    text-shadow: 5px 0 rgb(1, 22, 255);
+    top: 0;
+    color: rgb(254, 253, 254);
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-before 3s infinite linear alternate-reverse;
+  }
+</style>
+<script>
+
+const startAnimation = () => {
+	const typing = document.querySelector('.typing')!;
+
+	document.body.style.overflow = "hidden";
+
+	const typingElement = typing as HTMLElement;
+	typingElement.style.display = "block";
+
+	typingElement.addEventListener('animationend', () => {
+		typingElement.style.borderRight = "0";
+		setTimeout(() => {
+			
+		}, 1000);
+	});
+}
+
+startAnimation();
+</script>
