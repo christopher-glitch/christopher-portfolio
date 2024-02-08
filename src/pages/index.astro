@@ -20,6 +20,7 @@ import MyNavigation from '../components/MyNavigation.astro';
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</main>
 </Layout>
@@ -98,6 +99,7 @@ const startAnimation = () => {
 				animeElement.style.visibility = "hidden";
 				rootElement.style.animation = "fadeIn ease-in 1s";
 				rootElement.style.visibility = "visible";
+				document.body.style.overflow = "auto";
 				sessionStorage.setItem("started", "true");
 			});
 		}, 1000);
@@ -105,7 +107,7 @@ const startAnimation = () => {
 }
 
 window.onload = () => {
-	if (sessionStorage.getItem("started")) {
+	if (!sessionStorage.getItem("started")) {
 			startAnimation();
 	}else{
 		const root = document.querySelector('.root')!;
