@@ -5,7 +5,7 @@ import MyNavigation from '../components/MyNavigation.astro';
 ---
 
 <Layout title="Christopher Glitch">
-	<main class="w-full h-fit">
+	<main class="w-full h-screen">
 		<StartAnimation />
 		<div class="root"> 
 			<MyNavigation />
@@ -20,19 +20,11 @@ import MyNavigation from '../components/MyNavigation.astro';
 					</div>
 				</div>
 			</div>
-			<div class="About">
-			</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		width: 100%;
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 
 	.root{
 		visibility: hidden;
@@ -102,6 +94,7 @@ const startAnimation = () => {
 		setTimeout(() => {
 			animeElement.style.animation = "fadeOut 1.3s"
 			animeElement.addEventListener('animationend', () => {
+				animeElement.style.height = "0";
 				animeElement.style.visibility = "hidden";
 				rootElement.style.animation = "fadeIn ease-in 1s";
 				rootElement.style.visibility = "visible";
@@ -112,7 +105,7 @@ const startAnimation = () => {
 }
 
 window.onload = () => {
-	if (!sessionStorage.getItem("started")) {
+	if (sessionStorage.getItem("started")) {
 			startAnimation();
 	}else{
 		const root = document.querySelector('.root')!;
