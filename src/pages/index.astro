@@ -99,6 +99,7 @@ const startAnimation = () => {
 				loadingElement.style.visibility = "hidden";
 				rootElement.style.animation = "fadeIn ease-in 2s";
 				rootElement.style.visibility = "visible";
+				sessionStorage.setItem("started", "true");
 			});
 		}, 1000);
 	});
