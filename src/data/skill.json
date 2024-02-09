@@ -1,0 +1,25 @@
+{
+	"language": [
+		"Javascript",
+		"Typescript",
+		"HTML/CSS",
+		"Java",
+		"Dart",
+		"Golang",
+		"Python",
+		"C",
+		"Rust"
+	],
+	"framework":[
+		"React",
+		"Astro",
+		"Electron",
+		"Next.js",
+		"Flutter",
+		"Gin"
+	],
+	"others":[
+		"Unity",
+		"Docker"
+	]
+}
