@@ -35,8 +35,8 @@
 		{
 			"title": "KasaIru",
 			"projectImageSrc": [
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/KasaIru/KasaIru.png",
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/KasaIru/KasaIru2.png"
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/KasaIru/KasaIru.png?raw=true",
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/KasaIru/KasaIru2.png?raw=true"
 			],
 			"imgStyle": "mobile",
 			"outline": "Google Places APIとOpen Weather APIで情報を取得し、検索した場所でこれから傘が必要かどうかを教えてくれるモバイルアプリケーションです。DartとFlutterで作成しました。",
@@ -45,8 +45,8 @@
 		{
 			"title": "Can't Talk",
 			"projectImageSrc": [
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/CantTalk/CantTalk.png",
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/CantTalk/CantTalk2.png"
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/CantTalk/CantTalk.png?raw=true",
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/CantTalk/CantTalk2.png?raw=true"
 			],
 			"imgStyle": "desktop",
 			"outline": "Line Notifyで家族に自分が通話などで話せないことを通知し、家族の声が入るのを防ぐアプリケーションです。フレームワークにElectronを採用し、VanillaJSで作成しました。",
@@ -55,8 +55,8 @@
 		{
 			"title": "Web Site",
 			"projectImageSrc": [
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/web/website.png",
-				"https://github.com/christopher-glitch/christopher-portfolio/blob/e356390f1ec18f4cee4ad3845823bdb9b65ebeb1/public/web/website2.png"
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/web/website.png?raw=true",
+				"https://github.com/christopher-glitch/christopher-portfolio/blob/main/public/web/website2.png?raw=true"
 			],
 			"imgStyle": "web",
 			"outline": "趣味でいくつかwebサイトを作って公開しています。",
