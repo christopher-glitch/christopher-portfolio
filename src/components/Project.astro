@@ -1,0 +1,34 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import ProjectTemplate from "./ProjectTemplate.astro";
+import kasairu1 from "../../public/KasaIru/KasaIru.png";
+import kasairu2 from "../../public/KasaIru/KasaIru2.png";
+import cantTalk1 from "../../public/CantTalk/CantTalk.png";
+import cantTalk2 from "../../public/cantTalk/CantTalk2.png";
+import website1 from "../../public/web/website.png";
+import website2 from "../../public/web/website2.png";
+---
+
+<ContentLayout contentTitle="Project">
+	<ProjectTemplate 
+		title="KasaIru"
+		projectImageSrc={[kasairu1.src, kasairu2.src]}, 
+		imgStyle="mobile".
+		outline="Google Places APIとOpen Weather APIで情報を取得し、検索した場所でこれから傘が必要かどうかを教えてくれるモバイルアプリケーションです。DartとFlutterで作成しました。"
+		github="https://github.com/christopher-glitch/KasaIru"
+	/>
+	<ProjectTemplate 
+		title="Can't Talk"
+		projectImageSrc={[cantTalk1.src, cantTalk2.src]}, 
+		imgStyle="desktop".
+		outline="Line Notifyで家族に自分が通話などで話せないことを通知し、家族の声が入るのを防ぐアプリケーションです。フレームワークにElectronを採用し、VanillaJSで作成しました。"
+		github="https://github.com/christopher-glitch/cant_talk"
+	/>
+	<ProjectTemplate 
+		title="Web Site"
+		projectImageSrc={[website1.src, website2.src]}, 
+		imgStyle="web".
+		outline="趣味でいくつかwebサイトを作って公開しています。"
+		github="https://github.com/christopher-glitch/christopher-portfolio"
+	/>
+</ContentLayout>

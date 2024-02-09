@@ -1,0 +1,59 @@
+---
+interface Props {
+	title: string
+	projectImageSrc: string[] 
+	imgStyle: string
+	outline: string
+	github: string
+}
+
+const {title, projectImageSrc, imgStyle, outline, github } = Astro.props;
+---
+
+<div class="flex justify-center items-center flex-col h-auto mb-10">
+	<h2 class="my-5 text-2xl font-semibold font-Menlo">{title}</h2>
+	<div class="flex space-x-4">
+		{(projectImageSrc.length == 1)? 
+			<div class="avatar my-2">
+				{(imgStyle=="mobile")?
+				<div class="w-40 h-56 rounded-xl">
+					<img src={projectImageSrc[0]} alt="" width="200"/>
+				</div>
+				:
+				<div class="w-48 rounded-xl">
+					<img src={projectImageSrc[0]} alt="" width="200"/>
+				</div>}
+			</div>
+		:(projectImageSrc.map((p, i) => (
+			(i==0)?
+			<div class="avatar my-2">
+				{(imgStyle=="mobile")?
+				<div class="w-32 h-56 rounded-xl">
+					<img src={p} alt="" width="200"/>
+				</div>
+				:
+				<div class="w-40 rounded-xl">
+					<img src={p} alt="" width="200"/>
+				</div>}
+			</div>
+			:<div class="avatar my-2 hidden md:block">
+				{(imgStyle=="mobile")?
+				<div class="w-32 h-56 rounded-xl">
+					<img src={p} alt="" width="200"/>
+				</div>
+				:
+				<div class="w-40 rounded-xl">
+					<img src={p} alt="" width="200"/>
+				</div>}
+			</div>
+			)))}
+	</div>
+	<div class="mt-10">
+		<article class="text-wrap text-sm mx-5">
+			{outline}
+		</article>
+		<div class="flex flex-row justify-center mt-3">
+			<a class="btn btn-ghost" href={github}>Github</a>
+		</div>
+	</div>
+</div>
