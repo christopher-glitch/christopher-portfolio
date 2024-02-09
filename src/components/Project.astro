@@ -1,0 +1,27 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import ProjectTemplate from "./ProjectTemplate.astro";
+import projects from "../data/projects.json";
+
+
+import kasairu1 from "../../public/KasaIru/KasaIru.png";
+import kasairu2 from "../../public/KasaIru/KasaIru2.png";
+import cantTalk1 from "../../public/CantTalk/CantTalk.png";
+import cantTalk2 from "../../public/cantTalk/CantTalk2.png";
+import website1 from "../../public/web/website.png";
+import website2 from "../../public/web/website2.png";
+---
+
+<ContentLayout contentTitle="Project">
+	{
+		projects.map(({title, projectImageSrc, imgStyle, outline, github}) => (
+			<ProjectTemplate 
+				title={title}
+				projectImageSrc={projectImageSrc} 
+				imgStyle={imgStyle}
+				outline={outline}
+				github={github}
+			/>
+		))
+	}
+</ContentLayout>
