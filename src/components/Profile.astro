@@ -3,8 +3,11 @@ import ContentLayout from "../layouts/ContentLayout.astro";
 import profileImage from '../../public/profileImage.jpg';
 ---
 <ContentLayout contentTitle="Profile">
-	<div class="flex justify-center items-center flex-col md:flex-row h-auto">
-		<div class="avatar md:mr-10">
+	<h2 class="my-5 text-lg font-semibold font-Menlo">
+		About
+	</h2>
+	<div class="flex justify-center items-center flex-col md:flex-row h-auto mb-10">
+		<div class="avatar my-2 md:mr-10">
 			<div class="w-48 rounded-xl">
 				<img src={profileImage.src} alt="" width="150" height="180"/>
 			</div>
@@ -17,6 +20,43 @@ import profileImage from '../../public/profileImage.jpg';
 			<div class="flex flex-row justify-center mt-3">
 				<a class="btn btn-ghost" href="https://github.com/christopher-glitch">Github</a>
 			</div>
+		</div>
+	</div>
+	<h2 class="my-5 text-lg font-semibold font-Menlo">
+		Skill
+	</h2>
+	<div class="flex justify-between h-auto space-t-3 mx-5">
+		<div>
+			<p class="text-lg font-semibold">Language:</p>
+			<ul class="list-inside list-disc">
+					<li>Javascript</li>
+					<li>Typescript</li>
+					<li>HTML/CSS</li>
+					<li>Java</li>
+					<li>Dart</li>
+					<li>Golang</li>
+					<li>Python</li>
+					<li>C</li>
+					<li>Rust</li>
+			</ul>
+		</div>
+		<div>
+			<p class="text-lg font-semibold">Framework:</p>
+			<ul class="list-inside list-disc">
+					<li>React</li>
+					<li>Astro</li>
+					<li>Next.js</li>
+					<li>Electron</li>
+					<li>Flutter</li>
+					<li>Gin</li>
+			</ul>
+		</div>
+		<div>
+			<p class="text-lg font-semibold">Infra etc:</p>
+			<ul class="list-inside list-disc">
+					<li>Unity</li>
+					<li>Docker</li>
+			</ul>
 		</div>
 	</div>
 </ContentLayout>
